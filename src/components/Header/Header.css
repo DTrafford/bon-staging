@@ -1,0 +1,66 @@
+.navBar {
+  background-color: #bb6077;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBarBrand {
+  color: white !important;
+  font-size: 25px !important;
+  font-family: "Gayathri", cursive !important;
+  /* font-family: "Spicy Rice", cursive !important; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBarLink {
+  vertical-align: middle;
+  color: white;
+  cursor: pointer;
+  /* margin-right: 10px; */
+  margin-left: 10px;
+  text-decoration: none;
+}
+.navBarLink:hover {
+  vertical-align: middle;
+  color: white;
+  cursor: pointer;
+}
+
+.header-logo {
+  margin-right: 20;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.brand_link {
+  text-decoration: none;
+  color: white;
+}
+.brand_link:visited,
+.brand_link:hover {
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 992px) {
+  .navBarLink {
+    width: 100%;
+    border-bottom: 1px solid white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  .navBarBrand {
+    color: white !important;
+    font-size: 20px !important;
+    font-family: "Gayathri", cursive !important;
+    /* font-family: "Spicy Rice", cursive !important; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
