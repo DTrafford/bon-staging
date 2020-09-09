@@ -1,0 +1,12 @@
+.carousel {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 95vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.legend {
+  bottom: 45%;
+}

@@ -4,9 +4,11 @@ import Instagram from "../components/Instagram/Instagram";
 import Spinner from "../components/Spinner/Spinner";
 import Header from "../components/Header/Header";
 import SEO from "../components/seo"
-
+import Feed from "../components/InstagramNoAuth/Test";
+// import Feed from "react-instagram-authless-feed"
+import styles from '../styles/feed.module.css';
 // This can be retrieved with a GET https://www.instagram.com/web/search/topsearch/?context=blended&query=INSTAGRAM_USERNAME
-const INSTAGRAM_ID = "23131480596";
+const INSTAGRAM_ID = "32947961624";
 const THUMBNAIL_WIDTH = 640;
 const PHOTO_COUNT = 60;
 
@@ -22,11 +24,11 @@ export default function Gallery() {
         `https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${INSTAGRAM_ID}","first":${PHOTO_COUNT},"after":null}`
       );
       const data = await response.json();
-      console.log("DATA = ", data);
+      // console.log("DATA = ", data);
       if (data.data) {
         const photos = data.data.user.edge_owner_to_timeline_media.edges.map(
           ({ node }) => {
-            console.log(node);
+            // console.log(node);
 
             const { id } = node;
             const caption = node.edge_media_to_caption.edges[0] ? node.edge_media_to_caption.edges[0].node.text : '';
@@ -56,35 +58,34 @@ export default function Gallery() {
     }
   }
 
-  useEffect(() => {
-    fetchPhotos();
-  }, [photos]);
+  // useEffect(() => {
+  //   fetchPhotos();
+  // }, [photos]);
 
-  let content = <Spinner />;
-  if (isLoaded && !isError) {
-    content = (
-      <Wrapper>
-        {/* <HeaderContainer>
-          <GalleryTitle>Gallery</GalleryTitle>
-        </HeaderContainer> */}
-        <Instagram photos={photos} />
-        {/* <Instagram
-        userId={INSTAGRAM_ID}
-        thumbnailWidth={THUMBNAIL_WIDTH}
-        photoCount={PHOTO_COUNT}
-      /> */}
-      </Wrapper>
-    );
-  }
+  // let content = <Spinner />;
+  // if (isLoaded && !isError) {
+  //   content = (
+  //     <Wrapper>
+  //       {/* <HeaderContainer>
+  //         <GalleryTitle>Gallery</GalleryTitle>
+  //       </HeaderContainer> */}
+  //       <Instagram photos={photos} />
+  //       {/* <Instagram
+  //       userId={INSTAGRAM_ID}
+  //       thumbnailWidth={THUMBNAIL_WIDTH}
+  //       photoCount={PHOTO_COUNT}
+  //     /> */}
+  //     </Wrapper>
+  //   );
+  // }
 
-  if (isError) {
-    content = (
-      <Wrapper>
-
-        <ErrorDiv>Looks like we had a problem loading the pictres. <br /> Please try again soon.</ErrorDiv>
-      </Wrapper>
-    );
-  }
+  // if (isError) {
+  //   content = (
+  //     <Wrapper>
+  //       <ErrorDiv>Looks like we had a problem loading the pictres. <br /> Please try again soon.</ErrorDiv>
+  //     </Wrapper>
+  //   );
+  // }
   return (
     <>
       <Header />
@@ -92,7 +93,8 @@ export default function Gallery() {
         <HeaderContainer>
           <GalleryTitle>Gallery</GalleryTitle>
         </HeaderContainer>
-        {content}
+        {/* {content} */}
+        <Feed userName="blessourneststaging" className={"Feed"} classNameLoading="Loading" />
         {/* <HeaderContainer>
         <GalleryTitle>Gallery</GalleryTitle>
       </HeaderContainer>

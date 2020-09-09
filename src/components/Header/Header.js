@@ -61,7 +61,7 @@ export default function Headers() {
             <a href="https://www.facebook.com/blessournestcanada">
               <S.SocialIcon src={FacebookIcon} />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/blessourneststaging/">
               <S.SocialIcon src={InstagramIcon} />
             </a>
             <a href="https://twitter.com/OurStaging">

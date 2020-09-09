@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import * as S from './styles';
+import styles from './Slideshow.module.css'
 
 const SlideShow = () => {
     const [index, setIndex] = useState(0);
@@ -13,7 +14,7 @@ const SlideShow = () => {
     };
     return (
         <S.Wrapper>
-            <Carousel autoPlay showThumbs={false} showIndicators={false} infiniteLoop stopOnHover showStatus={false} swipeable>
+            <Carousel autoPlay showThumbs={false} showIndicators={false} infiniteLoop stopOnHover showStatus={false} swipeable className={styles.carousel}>
                 <div style={{ height: '100%' }}>
                     <S.Image src={require("../../assets/images/house1/68627283_2176254759151315_6699309530401996800_n.jpg")} />
                     {/* <img src={require("../../assets/images/house1/68627283_2176254759151315_6699309530401996800_n.jpg")} style={{ height: '100%' }} /> */}
