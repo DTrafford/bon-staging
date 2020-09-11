@@ -4,7 +4,7 @@ import Instagram from "../components/Instagram/Instagram";
 import Spinner from "../components/Spinner/Spinner";
 import Header from "../components/Header/Header";
 import SEO from "../components/seo"
-import Feed from "../components/InstagramNoAuth/Test";
+import Feed from "../components/InstagramNoAuth/Feed";
 // import Feed from "react-instagram-authless-feed"
 import styles from '../styles/feed.module.css';
 // This can be retrieved with a GET https://www.instagram.com/web/search/topsearch/?context=blended&query=INSTAGRAM_USERNAME
@@ -94,7 +94,7 @@ export default function Gallery() {
           <GalleryTitle>Gallery</GalleryTitle>
         </HeaderContainer>
         {/* {content} */}
-        <Feed userName="blessourneststaging" className={"Feed"} classNameLoading="Loading" />
+        <Feed userName="blessourneststaging" className={styles.photos} classNameLoading="Loading" />
         {/* <HeaderContainer>
         <GalleryTitle>Gallery</GalleryTitle>
       </HeaderContainer>

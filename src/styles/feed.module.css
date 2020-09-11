@@ -1,4 +1,26 @@
-Feed > img {
-    max-width: 100px;
-    border-radius: 10px;
-}
+.photos {
+    column-count: 1;
+    column-gap: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  
+  @media only screen and (min-width: 480px) {
+    .photos {
+      column-count: 2;
+    }
+  }
+  
+  @media only screen and (min-width: 720px) {
+    .photos {
+      column-count: 3;
+    }
+  }
+  
+  @media only screen and (min-width: 960px) {
+    .photos {
+      column-count: 4;
+    }
+  }

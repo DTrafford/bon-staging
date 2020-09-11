@@ -3,7 +3,9 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Link } from "gatsby";
 import "./Header.css";
-import logo from "../../assets/images/KIMLOGO-01.png";
+// import logo from "../../assets/images/logo_only.svg";
+import logo from "../../assets/images/KIMRGB.svg";
+// import logo from "../../assets/images/KIMLOGO-01.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as S from './styles';
 import FacebookIcon from '../../assets/icons/facebook.svg';
@@ -24,7 +26,7 @@ export default function Headers() {
               height="50"
               className="d-inline-block header-logo"
             />
-            <span style={{ marginLeft: '20px', marginRight: '20px' }}>Bless Our Nest</span>
+            {/* <span style={{ marginLeft: '20px', marginRight: '20px' }}>Bless Our Nest</span> */}
           </Link>
         </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
