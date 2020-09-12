@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 export const Wrapper = styled.div`
-    margin-top: 20px;
+    // margin-top: 20px;
     // height: 100vh;
     max-height: 100vh;
     // position:fixed;

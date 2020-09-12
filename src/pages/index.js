@@ -9,6 +9,7 @@ import SlideShow from '../components/SlideShow/SlideShow';
 import HomeBanner from "../components/HomeBanner/HomeBanner";
 import About from "../components/About/About";
 import MeetMe from "../components/MeetMe/MeetMe";
+import SectionParallax from "../components/SectionParallax/SectionParallax";
 import logo from "../assets/images/KIMLOGO-01.png";
 import '../styles/global.css'
 import SEO from "../components/seo"
@@ -20,6 +21,7 @@ const HomePage = () => (
     <S.Wrapper>
       {/* <S.HeroImage src={logo} /> */}
       {/* <S.HeroImage></S.HeroImage> */}
+      <SectionParallax />
       <SlideShow />
       <HomeBanner />
       <About />

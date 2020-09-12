@@ -3,8 +3,9 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Link } from "gatsby";
 import "./Header.css";
+import logo from "../../assets/images/blessournest.png";
 // import logo from "../../assets/images/logo_only.svg";
-import logo from "../../assets/images/KIMRGB.svg";
+// import logo from "../../assets/images/KIMRGB.svg";
 // import logo from "../../assets/images/KIMLOGO-01.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as S from './styles';
@@ -12,19 +13,19 @@ import FacebookIcon from '../../assets/icons/facebook.svg';
 import InstagramIcon from '../../assets/icons/instagram.svg';
 import TwitterIcon from '../../assets/icons/twitter.svg';
 import MailIcon from '../../assets/icons/mail.svg';
+import { css, jsx } from "@emotion/core";
 
 export default function Headers() {
   return (
     <div>
-      <Navbar expand="lg" className="navBar" fixed="top">
-        <div className="navBarBrand">
+      <Navbar expand="sm" className="navBar" fixed="top">
+        <div className="navBarBrand" css={css`height: 100%; width: 200px;`}>
           <Link to={'/'} className='brand_link'>
             <img
               alt=""
               src={logo}
-              width="70"
-              height="50"
               className="d-inline-block header-logo"
+              css={css`overflow: hidden; width: 100%; height: 100%;` }
             />
             {/* <span style={{ marginLeft: '20px', marginRight: '20px' }}>Bless Our Nest</span> */}
           </Link>
