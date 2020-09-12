@@ -1,10 +1,11 @@
 .carousel {
   width: 100% !important;
   height: 100% !important;
-  max-height: 95vh !important;
+  max-height: 90vh !important;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: hidden !important;
 }
 
 .legend {

@@ -21,8 +21,8 @@ const HomePage = () => (
     <S.Wrapper>
       {/* <S.HeroImage src={logo} /> */}
       {/* <S.HeroImage></S.HeroImage> */}
-      <SectionParallax />
       <SlideShow />
+      <SectionParallax />
       <HomeBanner />
       <About />
       <MeetMe />

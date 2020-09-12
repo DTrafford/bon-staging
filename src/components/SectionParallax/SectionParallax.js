@@ -16,7 +16,7 @@ const ANIM_SETTINGS = {
   valuesScale: [1, 0.7],
   valuesTransform: [0, -40],
 };
-var scrollProgress=0;
+var scrollProgress = 0;
 let setAnimation = (scrollProgress, ticks, values, stopOnTopRange) => {
   let animationValue = values[0];
   let delta = values[0] - values[1];
@@ -168,7 +168,7 @@ const SectionParallax = ({   title, text  }) => {
             #C36A82,
             #FFFFFF 50%
           ); 
-          z-index: 999;
+          z-index: 598;
         `}
       >
         <div
@@ -193,12 +193,15 @@ const SectionParallax = ({   title, text  }) => {
             justify-content: center;
           `}
         >
-            <img src={BlessNestLogo} css={css`width: 600px; height: 500px; margin-left: auto; margin-right: auto;`}/>
+            <img src={BlessNestLogo} css={css`width: 900px; height: 700px; margin-left: auto; margin-right: auto; 
+            @media(max-width: 900px) {display: none;})
+            // @media(max-width: 600px) {width: 600px; height: 500px;})
+            `}/>
         </div>
-        {scrollProgress > 0 && (
+        {/* {scrollProgress > 0 && ( */}
           <div
             css={css`position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                  display: grid; align-content: center; justify-items: center;
+            ${scrollProgress <= 0 ? 'display: none;' : 'display: grid;'} align-content: center; justify-items: center;
               `}
           >
                 <div
@@ -215,12 +218,12 @@ const SectionParallax = ({   title, text  }) => {
                     <div css={css`width: 100%; display: flex; justify-content: center; align-items: center; text-align-center;`}><div className={styles.textStyle} css={css`max-width: 75%;`}>Bless Our Nest Staging is the the GTA's most afforable and valueable staging service for your properties!</div></div>
                 </div>
             </div>
-            )}
+            {/* )} */}
             {/* SECOND SET OF */}
-            {scrollProgress > 0 && (
+            {/* {scrollProgress > 0 && ( */}
             <div
               css={css`position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                      display: grid; align-content: center; justify-items: center;
+                      ${scrollProgress <= 0 ? 'display: none;' : 'display: grid;'} align-content: center; justify-items: center;
                   `}
             >
                     <div
@@ -244,7 +247,8 @@ const SectionParallax = ({   title, text  }) => {
                         </div>
 
                       </HeadingContainer> */}
-                      <div css={css`display: flex; width: 100%; justify-content: center; align-items: center; flex-direction: column; @media(max-width: 700px) {display: none; width: 90%;})`}>
+                      <div css={css`display: flex; width: 100%; justify-content: center; align-items: center; flex-direction: column; 
+                      @media(max-width: 700px) {display: none; width: 90%;})`}>
                         <div css={css`position: relative; top: 20px; right: 45%; max-width: 450px;
                             // display: flex; justify-content: center; align-items: center; 
                               @media(max-width: 900px) {
@@ -311,7 +315,7 @@ const SectionParallax = ({   title, text  }) => {
 
                     </div>
                 </div>
-            )}
+            {/* )} */}
           <div>
         </div>
       </div>

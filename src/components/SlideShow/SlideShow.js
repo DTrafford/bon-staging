@@ -5,6 +5,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import * as S from './styles';
 import styles from './Slideshow.module.css'
+import { css, jsx } from "@emotion/core";
+import BlessNestLogo from '../../assets/images/KIMRGB.svg'
 
 const SlideShow = () => {
     const [index, setIndex] = useState(0);
@@ -18,17 +20,26 @@ const SlideShow = () => {
                 <div style={{ height: '100%' }}>
                     <S.Image src={require("../../assets/images/house1/68627283_2176254759151315_6699309530401996800_n.jpg")} />
                     {/* <img src={require("../../assets/images/house1/68627283_2176254759151315_6699309530401996800_n.jpg")} style={{ height: '100%' }} /> */}
-                    <S.Legend className="legend">Bring life to homes and get more money from your investment</S.Legend>
+                    {/* <S.Legend >
+                        <img src={BlessNestLogo} css={css`width: 700px; height: 500px; margin-left: auto; margin-right: auto; overflow-y: visible !important; @media(max-width: 600px {width: 600px; height: 500px;})`} />
+                    </S.Legend> */}
+                    {/* <S.Legend className="legend">Bring life to homes and get more money from your investment</S.Legend> */}
                     {/* <p className="legend">Bring life to homes and get more money from your investment</p> */}
                     {/* <p>Test</p> */}
                 </div>
                 <div>
                     <S.Image src={require("../../assets/images/house1/69065739_2176254429151348_2497317508877385728_n.jpg")} />
-                    <S.Legend className="legend">See how Bless Our Nest can help you today!</S.Legend>
+                    {/* <S.Legend >
+                        <img src={BlessNestLogo} css={css`width: 700px; height: 500px; margin-left: auto; margin-right: auto; @media(max-width: 600px {width: 600px; height: 500px; overflow-y: visible;})`} />
+                    </S.Legend> */}
+                    {/* <S.Legend className="legend">See how Bless Our Nest can help you today!</S.Legend> */}
                     {/* <img src={require("../../assets/images/house1/69065739_2176254429151348_2497317508877385728_n.jpg")} /> */}
                     {/* <p className="legend">Legend 2</p> */}
                 </div>
             </Carousel>
+            <S.Legend >
+                <img src={BlessNestLogo} css={css`width: 700px; height: 500px; margin-left: auto; margin-right: auto; overflow-y: visible !important; @media(max-width: 600px) {width: 400px; height: 300px;})`} />
+            </S.Legend>
         </S.Wrapper>
     );
     // return (
